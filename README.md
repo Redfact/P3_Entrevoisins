@@ -1,5 +1,5 @@
 ## Application : Entrevoisins
-![alt text](https://raw.githubusercontent.com/Gregory509-Android/P3_gregory_tropnas/master/78.jpg)
+![alt text](https://github.com/Redfact/P3_Entrevoisins/entrevoisin.png)
 
 ## Caractéristiques du projet
 
