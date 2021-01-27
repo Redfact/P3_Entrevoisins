@@ -1,5 +1,5 @@
 ## Application : Entrevoisins
-![alt text](https://github.com/Redfact/P3_Entrevoisins/entrevoisin.png)
+![alt text](https://github.com/Redfact/P3_Entrevoisins/blob/master/entrevoisin.png)
 
 ## Caractéristiques du projet
 
