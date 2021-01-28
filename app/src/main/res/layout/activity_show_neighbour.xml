@@ -9,132 +9,155 @@
     android:orientation="vertical"
     tools:context=".ui.neighbour_list.Show_neighbour">
 
-    <LinearLayout
-        android:id="@+id/AboutLayout"
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="168dp"
-        android:layout_margin="10dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="#FFFFFF"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UserDetailsLayout">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/About"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="@string/a_propos_de_moi"
-            android:textAlignment="textStart"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/AboutMeContentText"
-            android:layout_width="match_parent"
-            android:layout_height="217dp"
-            android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry_lorem_ipsum_has_been_the_industry_s_standard_dummy_text_ever_since_the_1500s_when_an_unknown_printer_took_a_galley_of_type_and_scrambled_it_to_make_a_type_specimen_book_it_has_survived_not_only_five_centuries_but_also_the_leap_into_electronic_typesetting_remaining_essentially_unchanged_it_was_popularised_in_the_1960s_with_the_release_of_letraset_sheets_containing_lorem_ipsum_passages_and_more_recently_with_desktop_publishing_software_like_aldus_pagemaker_including_versions_of_lorem_ipsum"
-            android:textSize="12sp" />
-    </LinearLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/Neighbourname2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F1EAEA"
+                android:orientation="vertical"
+                tools:context=".ui.neighbour_list.Show_neighbour">
 
-    <ImageView
-        android:id="@+id/imageUser"
-        android:layout_width="0dp"
-        android:layout_height="223dp"
-        android:background="#FFFFFF"
-        android:contentDescription="@string/todo_user_picture"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+                <LinearLayout
+                    android:id="@+id/AboutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="168dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/UserDetailsLayout">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/FavoriteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:contentDescription="@string/favorite_button"
-        android:focusable="true"
-        android:foregroundGravity="center"
-        android:src="@drawable/ic_star_white_24dp"
-        android:tint="@android:color/black"
-        app:backgroundTint="#FFFEFE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.354" />
+                    <TextView
+                        android:id="@+id/About"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="@string/a_propos_de_moi"
+                        android:textAlignment="textStart"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/ReturnButton"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="46dp"
-        android:layout_height="41dp"
-        android:background="#00FFFFFF"
-        android:backgroundTint="#00FFFFFF"
-        android:clickable="true"
-        android:contentDescription="@string/return_to_neighbour_list"
-        android:focusable="true"
-        app:icon="?attr/actionModeCloseDrawable"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+                    <TextView
+                        android:id="@+id/AboutMeContentText"
+                        android:layout_width="match_parent"
+                        android:layout_height="217dp"
+                        android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry_lorem_ipsum_has_been_the_industry_s_standard_dummy_text_ever_since_the_1500s_when_an_unknown_printer_took_a_galley_of_type_and_scrambled_it_to_make_a_type_specimen_book_it_has_survived_not_only_five_centuries_but_also_the_leap_into_electronic_typesetting_remaining_essentially_unchanged_it_was_popularised_in_the_1960s_with_the_release_of_letraset_sheets_containing_lorem_ipsum_passages_and_more_recently_with_desktop_publishing_software_like_aldus_pagemaker_including_versions_of_lorem_ipsum"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/UserDetailsLayout"
-        android:layout_width="0dp"
-        android:layout_height="172dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="#FFFFFF"
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageUser">
+                <ImageView
+                    android:id="@+id/imageUser"
+                    android:layout_width="0dp"
+                    android:layout_height="223dp"
+                    android:background="#FFFFFF"
+                    android:contentDescription="@string/todo_user_picture"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/UserName0"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="@string/caroline"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/FavoriteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:contentDescription="@string/favorite_button"
+                    android:focusable="true"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ic_star_white_24dp"
+                    android:tint="@android:color/black"
+                    app:backgroundTint="#FFFEFE"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.954"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.354" />
 
-        <TextView
-            android:id="@+id/UserAdresse"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:password="false"
-            android:phoneNumber="false"
-            android:text="@string/textview" />
+                <Button
+                    android:id="@+id/ReturnButton"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="46dp"
+                    android:layout_height="41dp"
+                    android:background="#00FFFFFF"
+                    android:backgroundTint="#00FFFFFF"
+                    android:clickable="true"
+                    android:contentDescription="@string/return_to_neighbour_list"
+                    android:focusable="true"
+                    app:icon="?attr/actionModeCloseDrawable"
+                    app:iconTint="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/UserNumber"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:phoneNumber="true"
-            android:text="@string/textview" />
+                <LinearLayout
+                    android:id="@+id/UserDetailsLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="172dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageUser">
 
-        <TextView
-            android:id="@+id/UserMail"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="@string/textview" />
+                    <TextView
+                        android:id="@+id/UserName0"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="@string/caroline"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/UserAdresse"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="@string/textview" />
+
+                    <TextView
+                        android:id="@+id/UserNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="@string/textview" />
+
+                    <TextView
+                        android:id="@+id/UserMail"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="@string/textview" />
+
+                </LinearLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>

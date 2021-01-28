@@ -26,8 +26,6 @@ import static com.openclassrooms.entrevoisins.utils.RecyclerViewItemCountAsserti
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.core.IsNull.notNullValue;
 
-
-
 /**
  * Test class for list of neighbours
  */
@@ -36,7 +34,6 @@ public class NeighboursListTest {
 
     // This is fixed
     private static int ITEMS_COUNT = 12;
-
     private ListNeighbourActivity mActivity;
 
     @Rule
@@ -63,8 +60,9 @@ public class NeighboursListTest {
      */
     @Test
     public void myNeighboursList_deleteAction_shouldRemoveItem() {
+
         onView(allOf(withId(R.id.list_neighbours), hasFocus())).check(withItemCount(ITEMS_COUNT));
         onView(allOf(withId(R.id.list_neighbours), hasFocus())).perform(RecyclerViewActions.actionOnItemAtPosition(1, new DeleteViewAction()));
-        onView(allOf(withId(R.id.list_neighbours), hasFocus())).check(withItemCount(ITEMS_COUNT-1));
+        onView(allOf(withId(R.id.list_neighbours), hasFocus())).check(withItemCount((ITEMS_COUNT)-1));
     }
 }

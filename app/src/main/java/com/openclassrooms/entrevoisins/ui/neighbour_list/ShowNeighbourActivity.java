@@ -2,10 +2,13 @@ package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.content.res.AppCompatResources;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -56,7 +59,6 @@ public class ShowNeighbourActivity extends AppCompatActivity {
         number.setText(CurNeighbour.getPhoneNumber());
         mail.setText("www.facebook.com/"+CurNeighbour.getName());
         aboutMe.setText(CurNeighbour.getAboutMe());
-
         ChangeFavoriteButtonColor(CurNeighbour.isFavorite(), AddFavorite);
     }
 
