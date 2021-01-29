@@ -28,10 +28,5 @@ public interface NeighbourApiService {
      */
     void createNeighbour(Neighbour neighbour);
 
-    // TODO : getFavoritesNeighbours()
-    /**
-     * Get all my favorites neighbours
-     * @return {@link List}
-     */
     List<Neighbour> getFavoritesNeighbours();
 }
