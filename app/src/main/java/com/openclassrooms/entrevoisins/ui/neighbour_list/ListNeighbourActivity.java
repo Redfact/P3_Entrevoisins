@@ -17,14 +17,12 @@ import butterknife.OnClick;
 
 public class ListNeighbourActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener{
 
-    // UI Components
     @BindView(R.id.tabs)
     TabLayout mTabLayout;
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.container)
     ViewPager mViewPager;
-
 
     ListNeighbourPagerAdapter mPagerAdapter;
 
@@ -39,7 +37,6 @@ public class ListNeighbourActivity extends AppCompatActivity implements TabLayou
         mTabLayout.setupWithViewPager(mViewPager);
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
         mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
-
     }
 
     @OnClick(R.id.add_neighbour)
@@ -53,12 +50,8 @@ public class ListNeighbourActivity extends AppCompatActivity implements TabLayou
     }
 
     @Override
-    public void onTabUnselected(TabLayout.Tab tab) {
-
-    }
+    public void onTabUnselected(TabLayout.Tab tab) {}
 
     @Override
-    public void onTabReselected(TabLayout.Tab tab) {
-
-    }
+    public void onTabReselected(TabLayout.Tab tab) {}
 }

@@ -29,7 +29,6 @@ import static android.support.v4.content.ContextCompat.startActivity;
 public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeighbourRecyclerViewAdapter.ViewHolder> {
 
     private final List<Neighbour> mNeighbours;
-    Context context;
     public MyNeighbourRecyclerViewAdapter(List<Neighbour> items) {
         mNeighbours = items;
     }
@@ -67,7 +66,6 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("click","item cliked");
                 Intent showNeighbours = new Intent( view.getContext(), ShowNeighbourActivity.class);
                 showNeighbours.putExtra("NeighbourClicked",neighbour);
                 startActivity(view.getContext(),showNeighbours,null);

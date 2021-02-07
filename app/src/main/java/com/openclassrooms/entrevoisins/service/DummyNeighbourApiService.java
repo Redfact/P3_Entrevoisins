@@ -38,7 +38,6 @@ public class DummyNeighbourApiService implements  NeighbourApiService {
         neighbours.add(neighbour);
     }
 
-    //TODO : implement getFavoritesNeighbours()
     @Override
     public List<Neighbour> getFavoritesNeighbours(){
         List<Neighbour> favorites = new ArrayList<Neighbour>();
