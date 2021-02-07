@@ -30,7 +30,7 @@
                 <LinearLayout
                     android:id="@+id/AboutLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="168dp"
+                    android:layout_height="170dp"
                     android:layout_margin="10dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
@@ -114,7 +114,7 @@
                 <LinearLayout
                     android:id="@+id/UserDetailsLayout"
                     android:layout_width="0dp"
-                    android:layout_height="172dp"
+                    android:layout_height="170dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
