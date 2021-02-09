@@ -17,19 +17,32 @@ public class DummyNeighbourApiServiceTest extends TestCase {
     List<Neighbour> neighbours;
     NeighbourApiService mApiService= DI.getNeighbourApiService();
     DummyNeighbourApiService dummyNeighbourApiService = new DummyNeighbourApiService();
+
     @Before
     public void setup(){
         dummyNeighbourApiService =  new DummyNeighbourApiService();
     }
+
+    @Test
+    public void testSetNeighbourToFavoriteStatus(){
+        Neighbour neighbour = dummyNeighbourApiService.getNeighbours().get(0);
+        dummyNeighbourApiService.setNeighbourFavoritesStatus(neighbour);
+
+        List<Neighbour> favorites = dummyNeighbourApiService.getFavoritesNeighbours() ;
+        assertEquals(favorites.get(0),neighbour);
+    }
+
     @Test
     public void testGetFavoritesNeighbours() {
-        dummyNeighbourApiService.getNeighbours().get(0).setIsFavorite();
-        dummyNeighbourApiService.getNeighbours().get(1).setIsFavorite();
-        dummyNeighbourApiService.getNeighbours().get(2).setIsFavorite();
+        dummyNeighbourApiService.setNeighbourFavoritesStatus(dummyNeighbourApiService.getNeighbours().get(1));
+        dummyNeighbourApiService.setNeighbourFavoritesStatus(dummyNeighbourApiService.getNeighbours().get(2));
+        dummyNeighbourApiService.setNeighbourFavoritesStatus(dummyNeighbourApiService.getNeighbours().get(3));
+
         List<Neighbour> favorites = dummyNeighbourApiService.getFavoritesNeighbours() ;
-        assertEquals(favorites.size(),3);
-        assertEquals(favorites.get(0) , dummyNeighbourApiService.getNeighbours().get(0) );
+        assertEquals(favorites.size(),4);
         assertEquals(favorites.get(1) , dummyNeighbourApiService.getNeighbours().get(1) );
         assertEquals(favorites.get(2) , dummyNeighbourApiService.getNeighbours().get(2) );
+        assertEquals(favorites.get(3) , dummyNeighbourApiService.getNeighbours().get(3) );
     }
+
 }

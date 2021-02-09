@@ -8,7 +8,6 @@ import java.util.Objects;
  */
 public class Neighbour implements Serializable {
 
-    // TODO : Status favoris bool
     private boolean isfavorite;
     
     /** Identifier */

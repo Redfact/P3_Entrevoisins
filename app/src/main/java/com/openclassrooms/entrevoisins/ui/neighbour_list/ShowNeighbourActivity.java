@@ -45,28 +45,28 @@ public class ShowNeighbourActivity extends AppCompatActivity {
     TextView aboutMe;
 
     private NeighbourApiService mApiService= DI.getNeighbourApiService();
-    private Neighbour CurNeighbour;
+    private Neighbour curNeighbour;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_neighbour);
         ButterKnife.bind(this);
         Intent intent = getIntent();
-        CurNeighbour = (Neighbour)intent.getSerializableExtra("NeighbourClicked");
-        Glide.with(this.getBaseContext()).load(CurNeighbour.getAvatarUrl()).into(imageUser);
-        UserName0.setText(CurNeighbour.getName());
-        adress.setText(CurNeighbour.getAddress());
-        number.setText(CurNeighbour.getPhoneNumber());
-        mail.setText("www.facebook.com/"+CurNeighbour.getName());
-        aboutMe.setText(CurNeighbour.getAboutMe());
-        ChangeFavoriteButtonColor(CurNeighbour.isFavorite(), AddFavorite);
+        curNeighbour = (Neighbour)intent.getSerializableExtra("NeighbourClicked");
+        Glide.with(this.getBaseContext()).load(curNeighbour.getAvatarUrl()).into(imageUser);
+        UserName0.setText(curNeighbour.getName());
+        adress.setText(curNeighbour.getAddress());
+        number.setText(curNeighbour.getPhoneNumber());
+        mail.setText("www.facebook.com/"+curNeighbour.getName());
+        aboutMe.setText(curNeighbour.getAboutMe());
+        ChangeFavoriteButtonColor(curNeighbour.isFavorite(), AddFavorite);
     }
 
     @OnClick(R.id.FavoriteButton)
     void addNeighbourToFavorites() {
         List<Neighbour> Neighbours = mApiService.getNeighbours();
-        Neighbours.get(Neighbours.indexOf(CurNeighbour)).setIsFavorite();
-        ChangeFavoriteButtonColor(Neighbours.get(Neighbours.indexOf(CurNeighbour)).isFavorite(), AddFavorite);
+        mApiService.setNeighbourFavoritesStatus(curNeighbour);
+        ChangeFavoriteButtonColor(Neighbours.get(Neighbours.indexOf(curNeighbour)).isFavorite(), AddFavorite);
     }
 
     @OnClick(R.id.ReturnButton)
