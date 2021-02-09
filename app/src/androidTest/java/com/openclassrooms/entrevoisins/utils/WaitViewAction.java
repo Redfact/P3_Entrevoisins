@@ -12,6 +12,7 @@ public class WaitViewAction {
 
     /**
      * Perform action of waiting for a specific time.
+     *
      */
     public static ViewAction waitFor(final long millis) {
         return new ViewAction() {
